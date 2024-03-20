@@ -29,8 +29,10 @@ import Layout from '../layouts/Layout.astro';
                 <div class="body">
                   <div class="panel -top"></div>
                   <div class="panel -windowleft"></div>
+                  <div class="panel -windowleft-duplicate"></div>
                   <div class="panel -windowright"></div>
                   <div class="panel -windowbottom"></div>
+                  <div class="panel -windowbottom-duplicate"></div>
                   <div class="panel -bottomleft"></div>
                   <div class="panel -bottomright"></div>
                   <div class="panel -doorleft"></div>
@@ -87,6 +89,7 @@ import Layout from '../layouts/Layout.astro';
                   <div class="shadow"></div>
                 </div>
               </div>
+              
               <div class="info-section">
                 <div class="panel -top"></div>
                 <div class="panel -front"></div>
@@ -95,10 +98,10 @@ import Layout from '../layouts/Layout.astro';
               </div>
               <div class="shelf-section">
                 <div class="pillar -left"></div>
-                <div class="pillar -right"></div>
-                <div class="pillar -center"></div>
+                <!-- <div class="pillar -right"></div> -->
+                <!-- <div class="pillar -center"></div> -->
                 <div class="arm -left"></div>
-                <div class="arm -right"></div>
+                <!-- <div class="arm -right"></div> -->
                 <div class="arm -center"></div>
                 <div class="line -line1"></div>
                 <div class="line -line2"></div>
@@ -108,12 +111,14 @@ import Layout from '../layouts/Layout.astro';
               </div>
               <div class="strap-section">
                 <div class="arm"></div>
+                
+                <div class="pillar -pillar00"></div>
                 <div class="pillar -pillar1"></div>
                 <div class="pillar -pillar2"></div>
                 <div class="pillar -pillar3"></div>
                 <div class="pillar -pillar4"></div>
-                <div class="pillar -pillar5"></div>
-                <div class="strap-parts">
+                <!-- <div class="pillar -pillar5"></div> -->
+                <!-- <div class="strap-parts">
                   <div class="strap">
                     <div class="shake">
                       <div class="joint"></div>
@@ -226,7 +231,7 @@ import Layout from '../layouts/Layout.astro';
                       <div class="handle"></div>
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -261,7 +266,7 @@ body {
   height: 50px;
   background: #ff0;
   border-radius: 100%;
-  transform: translate3d(250px, -50px, -500px);
+  transform: translate3d(337px, 3px, -500px);
   filter: drop-shadow(0 0 20px #ff0) blur(2px);
 }
 .background-section .pole {
@@ -315,14 +320,14 @@ body {
   transform: translate3d(0, 0, -110px);
 }
 .back-section .screen.-left {
-  left: -500px;
+  left: -668px;
   top: -500px;
   width: 500px;
   height: 1200px;
   transform: translate3d(0, 0, -110px);
 }
 .back-section .screen.-right {
-  left: 500px;
+  left: 354px;
   top: -500px;
   width: 500px;
   height: 1200px;
@@ -333,34 +338,46 @@ body {
           backface-visibility: hidden;
 }
 .back-section .body .panel.-top {
-  width: 500px;
+  width: 392px;
   height: 40px;
   background: #e7e3d9;
   transform: translateZ(-100px);
 }
 .back-section .body .panel.-windowleft {
-  width: 70px;
+  width: 21px;
   height: 200px;
   background: #e7e3d9;
   transform: translate3d(150px, 0, -100px);
+}
+.back-section .body .panel.-windowleft-duplicate {
+  width: 21px;
+    height: 200px;
+    background: #e7e3d9;
+    transform: translate3d(10px, 0, -100px);
 }
 .back-section .body .panel.-windowright {
   width: 40px;
   height: 200px;
   background: #e7e3d9;
-  transform: translate3d(460px, 0, -100px);
+  transform: translate3d(352px, 0, -100px);
 }
 .back-section .body .panel.-windowbottom {
-  width: 330px;
+  width: 221px;
   height: 80px;
   background: #e7e3d9;
   transform: translate3d(170px, 120px, -100px);
 }
+.back-section .body .panel.-windowbottom-duplicate {
+  width: 221px;
+    height: 80px;
+    background: #e7e3d9;
+    transform: translate3d(-190px, 120px, -100px);
+}
 .back-section .body .panel.-doorleft {
-  width: 30px;
+  width: 48px;
   height: 200px;
   background: #e7e3d9;
-  transform: translate3d(0, 0, -100px);
+  transform: translate3d(-208px, 0px, -100px);
 }
 .back-section .body .panel.-bottomleft {
   width: 30px;
@@ -379,29 +396,30 @@ body {
           backface-visibility: hidden;
 }
 .back-section .body .windowthickness.-top {
-  width: 240px;
-  height: 10px;
-  background: #b8b2a4;
-  transform: translate3d(220px, 35px, -105px) rotateX(-90deg);
+    width: 534px;
+    height: 40px;
+    background: #e7e3d9;
+    /* transform: translateZ(-100px); */
+    transform: translate3d(-169px, 0, -100px);
 }
-.back-section .body .windowthickness.-bottom {
+/* .back-section .body .windowthickness.-bottom {
   width: 240px;
   height: 10px;
   background: #f2ecdd;
   transform: translate3d(220px, 115px, -105px) rotateX(90deg);
-}
-.back-section .body .windowthickness.-left {
+} */
+/* .back-section .body .windowthickness.-left {
   width: 10px;
   height: 80px;
   background: #d7cfbe;
   transform: translate3d(215px, 40px, -105px) rotateY(90deg);
-}
-.back-section .body .windowthickness.-right {
+} */
+/* .back-section .body .windowthickness.-right {
   width: 10px;
   height: 80px;
   background: #d7cfbe;
   transform: translate3d(455px, 40px, -105px) rotateY(-90deg);
-}
+} */
 .back-section .body .bodythickness {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -412,12 +430,12 @@ body {
   background: #d7cfbe;
   transform: translate3d(-5px, 0, -105px) rotateY(-90deg);
 }
-.back-section .body .bodythickness.-right {
+/* .back-section .body .bodythickness.-right {
   width: 10px;
   height: 200px;
   background: #d7cfbe;
   transform: translate3d(495px, 0, -105px) rotateY(90deg);
-}
+} */
 .back-section .door.-left {
   transform: translate3d(30px, 40px, -100px);
 }
@@ -518,19 +536,19 @@ body {
 }
 
 .floor-section .panel {
-  width: 500px;
-  height: 140px;
-  background: repeating-radial-gradient(ellipse at right top, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.02) 10px), linear-gradient(0deg, #c1c2c6, #a2a29e);
-  transform: translate3d(0px, 130px, -30px) rotateX(90deg);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+     width: 597px;
+    height: 140px;
+    background: repeating-radial-gradient(ellipse at right top, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.02) 10px), linear-gradient(0deg, #c1c2c6, #a2a29e);
+    transform: translate3d(-205px, 130px, -30px) rotateX(90deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .ceiling-section .panel {
-  width: 500px;
+  width: 596px;
   height: 140px;
   background: linear-gradient(0deg, #afaca4, #bebbb5);
-  transform: translate3d(0px, -70px, -30px) rotateX(-90deg);
+  transform: translate3d(-205px, -70px, -30px) rotateX(-90deg);
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
@@ -629,17 +647,17 @@ body {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
-.info-section .panel.-top {
+/* .info-section .panel.-top {
   width: 500px;
   height: 31px;
   background: #fff;
   transform: translate3d(0, -15.5px, -94.4px) rotateX(90deg);
-}
+} */
 .info-section .panel.-front {
-  width: 500px;
-  height: 30px;
-  background: linear-gradient(0deg, #d1cdc4, #bfbbb2);
-  transform: translate3d(0, -4.5px, -89.4px) rotateX(-45deg);
+    width: 596px;
+    height: 30px;
+    background: linear-gradient(0deg, #d1cdc4, #bfbbb2);
+    transform: translate3d(-206px, -4.5px, -89.4px) rotateX(-45deg);
 }
 .info-section .panel.-left {
   width: 21px;
@@ -691,7 +709,7 @@ body {
   transform: rotateZ(-80deg);
 }
 .shelf-section .line {
-  width: 320px;
+  width: 157px;
   height: 3px;
   background: linear-gradient(0deg, #555, #fff);
 }
@@ -729,15 +747,21 @@ body {
 }
 
 .strap-section .arm {
-  width: 500px;
-  height: 3px;
-  background: linear-gradient(0deg, #555, #fff);
-  transform: translate3d(0, 15px, -20px);
+  width: 516px;
+    height: 3px;
+    background: linear-gradient(0deg, #555, #fff);
+    transform: translate3d(-147px, 15px, -20px);
 }
 .strap-section .pillar {
   width: 3px;
   height: 15px;
   background: linear-gradient(-90deg, #555, #fff);
+}
+.strap-section .pillar.-pillar0 {
+  transform: translate3d(-126px, 0, -20px);
+}
+.strap-section .pillar.-pillar00 {
+  transform: translate3d(-89px, 0, -20px);
 }
 .strap-section .pillar.-pillar1 {
   transform: translate3d(10px, 0, -20px);
@@ -1069,13 +1093,13 @@ div {
 .monitor {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 257px;
   width: 100%;
   height: 100%;
   pointer-events: none;
   perspective: 500px;
   transition: 300ms;
-  transform: scale3d(3, 3, 3);
+  transform: scale3d(2, 2, 2);
 }
 
 .trigger {
